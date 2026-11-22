@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ПромТехСервис — сервисный центр БелАЗ в Смоленске</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F1F3F4;--ink:#1B232A;--muted:#46525C;--card:#fff;--line:#D2D9DD;--steel:#24323D;--amber:#F2B200;--link:#0B5A8A;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181D;--ink:#EEF0F1;--muted:#AEB8BF;--card:#1B242B;--line:#2F3B44;--steel:#0C1115;--link:#6DB8E8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12181D;--ink:#EEF0F1;--muted:#AEB8BF;--card:#1B242B;--line:#2F3B44;--steel:#0C1115;--link:#6DB8E8;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 "Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{background:var(--steel);color:#fff}
+header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-top:14px;padding-bottom:14px}
+.logo{font-weight:800;font-size:1.25rem;color:#fff;text-decoration:none}
+.logo span{color:var(--amber)}
+nav{display:flex;flex-wrap:wrap;gap:4px 8px}
+nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+nav a:hover{background:rgba(255,255,255,.12)}
+.hero{background:var(--steel);color:#fff;padding:36px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:.85fr 1.25fr;gap:32px;align-items:center}
+h1{font-weight:800;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:0 0 18px}
+.hero p{font-size:1.2rem;max-width:34em;margin:0 0 26px;color:#DCE3E8}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 24px;border-radius:12px;font-weight:600;font-size:1.05rem;text-decoration:none;border:2px solid var(--amber)}
+.btn.main{background:var(--amber);color:#1B232A}
+.btn.alt{color:#fff}
+.btn:hover{filter:brightness(1.1)}
+.truck{width:100%;height:auto}
+.facts{margin-top:-34px}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.facts li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.facts b{display:block;font-size:1.35rem;line-height:1.25;margin-bottom:4px}
+.facts span{color:var(--muted)}
+section{padding:56px 0 8px}
+h2{font-weight:800;font-size:clamp(1.6rem,3.5vw,2.2rem);margin:0 0 8px;line-height:1.2}
+.lead{color:var(--muted);margin:0 0 26px;max-width:42em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 6px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted)}
+.svc{border-left:6px solid var(--amber)}
+.search{display:block;width:100%;max-width:520px;font:inherit;padding:14px 16px;border:2px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink)}
+.cnt{color:var(--muted);margin:10px 0 16px}
+.sub{font-size:1.4rem;font-weight:800;margin:32px 0 6px}
+.group{margin-bottom:14px}
+.group h3{margin:0 0 10px;font-size:1.25rem}
+.row{display:grid;grid-template-columns:1fr auto;gap:2px 20px;padding:12px 0;border-top:1px solid var(--line)}
+.row b{font-size:1.05rem}
+.row .meta{grid-column:1;color:var(--muted);font-size:.98rem}
+.row .pay{grid-column:2;grid-row:1/3;font-weight:800;font-size:1.15rem;text-align:right}
+.note{margin-top:16px;color:var(--muted);font-size:.98rem}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.contacts dt{font-weight:600;color:var(--muted);font-size:.95rem}
+.contacts dd{margin:0 0 14px;font-size:1.15rem}
+.contacts .tel{font-size:1.5rem;font-weight:800;text-decoration:none}
+footer{margin-top:56px;background:var(--steel);color:#C9D2D8;padding:28px 0;font-size:.95rem}
+@media (max-width:800px){.hero .wrap{grid-template-columns:1fr}.facts ul{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row .pay{grid-column:1;grid-row:auto;text-align:left}.truck{max-width:560px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="#top">Пром<span>Тех</span>Сервис</a>
+<nav aria-label="Разделы сайта"><a href="#about">О компании</a><a href="#services">Услуги</a><a href="#team">Команда</a><a href="#jobs">Вакансии</a><a href="#contacts">Контакты</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Обслуживаем и ремонтируем карьерную технику БелАЗ</h1>
+<p>Официальный дилер и аттестованный сервисный центр БелАЗ. Офис в Смоленске. Запасные части, ремонт узлов и агрегатов, модернизация техники.</p>
+<div class="btns"><a class="btn main" href="tel:+79203170170">Офис: +7 (4812) 70-21-17</a><a class="btn alt" href="#jobs">Смотреть вакансии</a></div>
+</div>
+<svg class="truck" viewBox="0 0 600 340" role="img" aria-label="Карьерный самосвал БелАЗ">
+<defs><g id="wh"><circle r="60" fill="#1E1E1E"/><circle r="26" fill="#A9B1B7"/><circle r="9" fill="#6A747C"/></g></defs>
+<ellipse cx="320" cy="327" rx="285" ry="9" fill="#000" opacity=".3"/>
+<rect x="110" y="208" width="420" height="22" rx="8" fill="#3A444C"/>
+<path d="M96 136 L238 100 L526 84 L564 106 L546 204 L262 210 L224 178 L112 178 Z" fill="#F2B200" stroke="#F2B200" stroke-width="12" stroke-linejoin="round"/>
+<path d="M238 100 L526 84 L564 106 L270 120 Z" fill="#FFD23F" opacity=".6"/>
+<path d="M262 156 H548" stroke="#D49A00" stroke-width="4" stroke-linecap="round"/>
+<path d="M118 180 V154 L146 142 H214 V180 Z" fill="#E0A600" stroke="#E0A600" stroke-width="8" stroke-linejoin="round"/>
+<path d="M130 156 L150 150 H204 V170 H130 Z" fill="#8FB5C9" stroke="#8FB5C9" stroke-width="6" stroke-linejoin="round"/>
+<rect x="98" y="182" width="30" height="34" rx="8" fill="#3A444C"/>
+<use href="#wh" x="176" y="267"/><use href="#wh" x="452" y="267"/>
+<path d="M110 262 A66 66 0 0 1 242 262" fill="none" stroke="#E0A600" stroke-width="12" stroke-linecap="round"/>
+<path d="M386 262 A66 66 0 0 1 518 262" fill="none" stroke="#E0A600" stroke-width="12" stroke-linecap="round"/>
+</svg>
+</div></div>
+
+<div class="wrap facts"><ul>
+<li><b>С 2009 года</b><span>ремонтируем узлы и агрегаты БелАЗ</span></li>
+<li><b>Официальный сервисный центр</b><span>аттестован заводом БелАЗ</span></li>
+<li><b>Запасные части</b><span>более 15 лет поставляем качественные запчасти</span></li>
+</ul></div>
+
+<section id="about"><div class="wrap">
+<h2>О компании</h2>
+<p class="lead">ООО «ПромТехСервис» обслуживает карьерную и специальную технику БелАЗ: от монтажа и гарантийного сопровождения до капитального ремонта и модернизации. Офис компании находится в Смоленске, а вакансии открыты в разных городах.</p>
+</div></section>
+
+<section id="services"><div class="wrap">
+<h2>Что мы делаем</h2>
+<p class="lead">Полный цикл работ с техникой БелАЗ и другой специальной техникой.</p>
+<div class="grid">
+<div class="card svc"><h3>Монтаж и сборка</h3><p>Ввод техники в эксплуатацию.</p></div>
+<div class="card svc"><h3>Техническое обслуживание</h3><p>Плановое и гарантийное сопровождение.</p></div>
+<div class="card svc"><h3>Текущий и капитальный ремонт</h3><p>Ремонт узлов и агрегатов, аварийный ремонт.</p></div>
+<div class="card svc"><h3>Модернизация</h3><p>Восстановление и переоборудование техники.</p></div>
+<div class="card svc"><h3>Запасные части</h3><p>Поставка запчастей для БелАЗ.</p></div>
+</div>
+</div></section>
+
+<section id="team"><div class="wrap">
+<h2>Наша команда</h2>
+<h3 class="sub">Офисная команда</h3>
+<p class="lead">Работает в офисе в Смоленске.</p>
+<div class="grid">
+<div class="card"><h3>Отдел кадров</h3><p>Подбор и оформление сотрудников, работа с вакансиями.</p></div>
+<div class="card"><h3>Бухгалтерия</h3><p>Учёт, расчёты с сотрудниками и контрагентами.</p></div>
+</div>
+<h3 class="sub">Команда ПУ: производственные участки</h3>
+<p class="lead">Участки, где обслуживают и ремонтируют технику БелАЗ.</p>
+<div class="grid">
+<div class="card"><h3>Механики</h3><p>Организуют ремонт и следят за состоянием техники на участках.</p></div>
+<div class="card"><h3>Слесари</h3><p>Монтаж, сборка, техническое обслуживание и ремонт узлов и агрегатов.</p></div>
+<div class="card"><h3>Электрики и наладчики КИПиА</h3><p>Диагностика и ремонт электрооборудования и систем управления.</p></div>
+<div class="card"><h3>Токари</h3><p>Проточка коллекторов, наплавка и расточка валов.</p></div>
+<div class="card"><h3>Инженеры</h3><p>Сервисные инженеры и специалисты ДВС-центра.</p></div>
+<div class="card"><h3>Склад запчастей</h3><p>Приём, хранение и выдача запасных частей.</p></div>
+</div>
+</div></section>
+
+<section id="jobs"><div class="wrap">
+<h2>Вакансии</h2>
+<p class="lead">Вакансии с нашей страницы на hh.ru. Одинаковые вакансии из разных городов собраны в одну карточку.</p>
+<label for="q" style="display:block;font-weight:600;margin-bottom:8px">Поиск по вакансиям</label>
+<input id="q" class="search" type="search" placeholder="Например: слесарь" autocomplete="off">
+<p id="cnt" class="cnt" aria-live="polite"></p>
+<div id="list"></div>
+<p class="note">Условия указаны по объявлениям на hh.ru и могут измениться. Подробности по телефону офиса в Смоленске <a href="tel:+79203170170">+7 920 317 01 70</a> или <a href="tel:+74812702117">+7 (4812) 70-21-17</a>.</p>
+<p><a class="btn main" href="https://smolensk.hh.ru/employer/4414945?hhtmFrom=vacancy&tab=VACANCIES">Все вакансии по всем регионам на hh.ru</a></p>
+</div></section>
+
+<section id="contacts"><div class="wrap">
+<h2>Контакты</h2>
+<div class="contacts card"><dl style="margin:0">
+<dt>Офис в Смоленске</dt><dd><a class="tel" href="tel:+79203170170">+7 920 317 01 70</a></dd>
+<dt>Телефон для всех регионов</dt><dd><a class="tel" href="tel:+74812702117">+7 (4812) 70-21-17</a></dd>
+<dt>Электронная почта</dt><dd><a href="mailto:promtehservis@ptsbelaz.ru">promtehservis@ptsbelaz.ru</a></dd></dl>
+<dl style="margin:0">
+<dt>Адрес офиса</dt><dd>214030, г. Смоленск, Краснинское шоссе, д. 21, помещение 305</dd>
+<dt>Часы работы офиса</dt><dd>Пн–Пт: 9:00–17:00<br>Сб–Вс: выходной</dd></dl></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© ООО «ПромТехСервис», Смоленск. Сервисное обслуживание карьерной техники и запасные части.</div></footer>
+
+<script>
+(function(){
+var V=[
+{t:"Слесарь по ремонту автотранспорта",r:[{c:"рп Чегдомын, пгт Лучегорск, Ковдор",p:"от 180 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"}]},
+{t:"Электрогазосварщик-газорезчик",r:[{c:"пгт Лучегорск, рп Чегдомын",p:"от 180 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"}]},
+{t:"Электрогазосварщик",r:[{c:"Ковдор, рп Чегдомын",p:"от 180 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"}]},
+{t:"Наладчик КИПиА",r:[{c:"Ковдор, пгт Лучегорск",p:"от 210 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"}]},
+{t:"Наладчик КИПиА/Электрик по ремонту автомобилей",r:[{c:"пгт Лучегорск, рп Чегдомын",p:"от 210 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"}]},
+{t:"Токарь",r:[
+{c:"Ковдор, пгт Лучегорск",p:"до 210 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"},
+{c:"Ковдор",p:"от 210 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"}]},
+{t:"Инженер ДВС",r:[
+{c:"рп Чегдомын, пгт Лучегорск",p:"от 220 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"},
+{c:"рп Чегдомын",p:"220 000 ₽ за вахту, на руки",m:"Опыт 1–3 года · Вахта · Выплаты два раза в месяц"}]},
+{t:"Начальник склада ТМЦ",r:[{c:"пгт Новошахтинский",p:"от 54 000 ₽ за месяц, на руки",m:"Опыт 1–3 года · Выплаты два раза в месяц"}]},
+{t:"Руководитель ДВС-центра",r:[{c:"Смоленск, Ленинский район",p:"зарплата не указана",m:"Опыт 1–3 года"}]},
+{t:"Инженер",r:[{c:"Смоленск, Ленинский район",p:"зарплата не указана",m:"Без опыта"}]},
+{t:"Экономист",r:[{c:"Смоленск, Ленинский район",p:"от 57 000 ₽ за месяц, на руки",m:"Опыт 1–3 года · Выплаты два раза в месяц"}]}
+];
+var q=document.getElementById('q'),list=document.getElementById('list'),cnt=document.getElementById('cnt');
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt)e.textContent=txt;return e}
+function draw(){
+var w=q.value.toLowerCase().split(/\s+/).filter(Boolean),n=0;
+list.textContent='';
+V.forEach(function(g){
+var hay=(g.t+' '+g.r.map(function(x){return x.c+' '+x.p+' '+x.m}).join(' ')).toLowerCase();
+if(!w.every(function(s){return hay.indexOf(s)>-1}))return;
+n++;
+var card=el('div','card group');card.appendChild(el('h3','',g.t));
+g.r.forEach(function(x){
+var row=el('div','row');
+row.appendChild(el('b','',x.c));row.appendChild(el('span','pay',x.p));row.appendChild(el('span','meta',x.m));
+card.appendChild(row)});
+list.appendChild(card)});
+cnt.textContent=n?('Найдено вакансий: '+n):'Ничего не найдено. Измените запрос или откройте все вакансии на hh.ru.';
+}
+q.addEventListener('input',draw);draw();
+})();
+</script>
+</body>
+</html>
